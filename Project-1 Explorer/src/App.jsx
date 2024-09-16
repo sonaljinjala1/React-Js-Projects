@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import DataTable from "./DataTable"; // Child component
 import "./App.css"; // CSS file for styling
 
+
+
+
+// Create a Class based component to implement this data pass to another component show in your component and must be use props using css
+
+
 class App extends Component {
   constructor() {
     super();
