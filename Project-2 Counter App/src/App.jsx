@@ -4,6 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+//create counter app using function component (props state)
+
   function App() {
     const [no , setNo ] = useState(0);
 
