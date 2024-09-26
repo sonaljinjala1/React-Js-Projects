@@ -10,7 +10,7 @@ const Counter = ({ no, plus, minus, reset }) => {
                 <button className="  btn1     btn btn-success" onClick={() => minus()}>-</button>
             </div>
 
-            <button className="btn btn-success" onClick={() => reset()} style={{ fontSize: "25px " , fontWeight: "600" , }}>Reset</button>
+            <button className="btn btn-success" onClick={() => reset()} style={{ fontSize: "25px ", fontWeight: "600", }}>Reset</button>
         </div>
     )
 }
