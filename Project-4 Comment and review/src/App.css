@@ -1,0 +1,121 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background: rgb(2,0,36);
+  background: linear-gradient(111deg, rgba(2,0,36,0.9669117647058824) 0%, rgba(3,2,50,0.9108893557422969) 12%, rgba(4,3,64,0.9220938375350141) 24%, rgba(7,6,92,0.8100490196078431) 48%, rgba(9,9,121,0.7344187675070029) 73%, rgba(0,9,255,0.3842787114845938) 100%); */
+  margin: 0;
+  padding: 0;
+ 
+  background-image: url('../src/assets/img/1_XJpPGY70QpBeY-Qegl2EkA.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-blend-mode: darken !important;
+
+
+  
+  
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  color: #343a40;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+}
+
+/* Table styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table  thead tr th {
+  background-color: #007bff !important;
+  color: #ffffff !important; 
+  text-align: center;
+}
+.styled-table th, 
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.styled-table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+.styled-table tr:hover:first-child{
+  background-color: white !important;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+input{
+  font-size: 16px;
+  font-weight: 550;
+  
+}
+input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  padding: 10px 15px;
+  color: #ffffff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+ 
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
