@@ -1,0 +1,22 @@
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #f04e23;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
