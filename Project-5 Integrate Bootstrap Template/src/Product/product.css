@@ -106,7 +106,7 @@ ol {
 }
 
 .product .text-box h3 {
-    font-size: 18px;
+    font-size: 15px;
     font-family: var(--poppins);
     margin: 10px 0;
     color: #000000;
@@ -183,5 +183,127 @@ ol {
 .product .box-1:hover i {
     visibility: visible;
 }
+.product-table{
+    margin-top: 10px;
+    
+}
 
+.product-table ul li{
+    list-style: none;
+    border-radius: 5px !important;
+    border: 1px solid #c8c7c7df;
+    margin-bottom: 5px !important;
+}
+.product-table ul li button{
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 14px !important;
+    font-weight: 500;
+    transition: all 0.5s;
+    border: none !important; 
+    font-size: 18px;
+    font-weight: 800 !important;
+    position: relative;
+    content: '';
+    background-color: rgba(232, 235, 235, 0.311) !important;
+}
+.product-table ul li  button i {
+    display: flex !important;
+    justify-content: end !important;
+    flex-wrap: wrap !important;
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    align-items: center !important;
+}
+.product-table ul li button:hover{
+    color: #64b496;
+}
+
+.product-table ul li .active{
+    color: #64b496;
+}
+.cubes {
+    margin-top: 24px;
+    position: relative;
+    content: '';
+    position: sticky;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.cubes img{
+    border-radius: 5px;
+    object-fit: cover;
+    object-fit: fill;
+    vertical-align: middle;
+    overflow: hidden;
+ 
+}
+.cubes   .cr-ice-cubes-contain {
+    padding: 60px 20px 20px 20px;
+    position: absolute;
+    top: 0 !important;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.cubes .cr-ice-cubes-contain h4.title {
+    margin-bottom: 5px;
+    font-family: "Manrope", sans-serif;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.cubes .cr-ice-cubes-contain h5.sub-title {
+    margin-bottom: 5px;
+    font-family: "Manrope", sans-serif;
+    text-transform: uppercase;
+    font-size: 38px;
+    color: #f7e8aa;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.cubes .cr-ice-cubes-contain span {
+    font-size: 16px;
+    color: #fff;
+}
+.cubes .cr-ice-cubes-contain a {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 5px;
+}
+.cr-button {
+    height: 40px;
+    transition: 1s !important;
+    padding: 8px 22px;
+    font-size: 14px;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.2;
+    background-color: #64b496;
+    color: #fff;
+    border: 1px solid #64b496;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cr-button:hover{
+    background-color: black;
+    border-color: black;
+}
 /* product end */

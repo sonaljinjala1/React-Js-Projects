@@ -84,15 +84,20 @@
     text-decoration: none;
     font-weight: 800;
 }
+.catagary{
+    position: relative;
+    content: '';
+    justify-content: center !important;
+}
 .catagary .contant{
     font-family: "Manrope", sans-serif;
     position: absolute;
     font-weight: bold;
-    top: 390px;
-    left: 150px;
+    top: 70%;
+    left: 38%;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center;
     flex-direction: column;
 }

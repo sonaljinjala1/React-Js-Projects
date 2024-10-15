@@ -84,6 +84,7 @@ p {
 }
 .button a{
     height: 40px;
+    width: 150px;
     transition:0.5s;
     padding: 12px 22px;
     font-size: 14px;

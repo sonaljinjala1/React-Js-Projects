@@ -8,6 +8,12 @@ import Header from './Header/header';
 import Catagary from './Catagary/catagary';
 import Product from './Product/product';
 import Fresh from './Fresh/fresh';
+import Services from './Services/services';
+import Deal from './Deal/deal';
+import Popular from './Popular/popular';
+import Review from './Review/review';
+import News from './News/news';
+import Footer from './Footer/footer';
 
 
 
@@ -21,6 +27,12 @@ function App() {
         <Catagary/>
         <Product/>
         <Fresh/>
+        <Services/>
+        <Deal/>
+        <Popular/>
+        <Review/>
+        <News/>
+        <Footer/>
       
     </>
     
