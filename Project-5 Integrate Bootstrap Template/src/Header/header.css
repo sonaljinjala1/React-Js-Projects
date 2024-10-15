@@ -265,7 +265,7 @@ a.cr-right-bar-item:hover  .dropdown-menu-top{
 .bottom-header .menu-list ul li{
     position: relative;
 }
-.bottom-header .menu-list ul li a::after{
+.bottom-header .menu-list ul li::after{
     position: relative;
     content: "";
     border-bottom:  2px solid #64b496;
@@ -274,17 +274,17 @@ a.cr-right-bar-item:hover  .dropdown-menu-top{
     transition: 1s;
     margin-top: 40px;
 }
-.bottom-header .menu-list ul li a:hover::after{
+.bottom-header .menu-list ul li:hover::after{
     position: absolute;
     width: 88%;
 }
 .bottom-header .menu-list{
     display: flex !important;
 }
-.bottom-header .menu-list ul li .droup-down-menu ul li a::after,&::before{
+.bottom-header .menu-list ul li .droup-down-menu ul li::after,&::before{
     display: none;
 }
-.bottom-header .menu-list ul li  .droup-down-menu ul li a:hover{
+.bottom-header .menu-list ul li  .droup-down-menu ul li  a:hover{
     color: #64b496;
 }
 

@@ -59,7 +59,9 @@ p {
 .banner h5{
         margin-bottom: 20px;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 900;
+        color: black;
+        line-height: 30px;
 }
 .banner span{
     margin-right: 5px;
