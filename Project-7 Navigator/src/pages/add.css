@@ -1,0 +1,23 @@
+body{
+    background-color: #b699ff;
+}
+.bodyColor{
+    background-color: #000000;
+}
+form .btn:hover{
+    background-color: #9e78ff;
+}
+table tbody td{
+    font-size: 17px;
+}
+table thead th{
+    font-size: 18px;
+    padding: 30px 0;
+    font-weight: 700;
+}
+table {
+    border-radius: 20px !important;
+    overflow: hidden;
+    margin-top: 40px;
+    width: 100% ;
+}
