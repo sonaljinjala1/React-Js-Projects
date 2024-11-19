@@ -22,20 +22,20 @@ import Footer from './Footer/footer';
 function App() {
   return (
     <>
-        <Header/>
-        <Banner/> 
-        <Catagary/>
-        <Product/>
-        <Fresh/>
-        <Services/>
-        <Deal/>
-        <Popular/>
-        <Review/>
-        <News/>
-        <Footer/>
-      
+      <Header />
+      <Banner />
+      <Catagary />
+      <Product />
+      <Fresh />
+      <Services />
+      <Deal />
+      <Popular />
+      <Review />
+      <News />
+      <Footer />
+
     </>
-    
+
   );
 }
 

@@ -16,6 +16,7 @@ const App = () => {
     setTasks(storedTasks);
   }, []);
 
+  //Add Task 
   const addTask = () => {
     if (taskTitle && taskDate && taskDescription) {
       const newTask = {
@@ -40,6 +41,8 @@ const App = () => {
     setTimeout(() => setAlertMessage(''), 3000);
   };
 
+
+  //delet task
   const deleteTask = (id) => {
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
@@ -49,12 +52,16 @@ const App = () => {
     setTimeout(() => setAlertMessage(''), 3000);
   };
 
+
+
+  //edit task
   const editTask = (task) => {
     setTaskTitle(task.title);
     setTaskDate(task.date);
     setTaskDescription(task.description);
     setEditTaskId(task.id);
   };
+
 
   const clearFields = () => {
     setTaskTitle('');
@@ -105,9 +112,10 @@ const App = () => {
               <div key={task.id} className="task-card p-3 mb-2">
                 <h6>{task.title}</h6>
                 <p>{task.date}</p>
-                <p>{task.description}</p>
-                <button className="btn btn-warning btn-sm me-2" onClick={() => editTask(task)}>Edit</button>
-                <button className="btn btn-danger btn-sm" onClick={() => deleteTask(task.id)}>Delete</button>
+                <p style={{paddingBottom:"10px"}}>{task.description}</p>
+                <button className="btn  btn-sm me-2" onClick={() => editTask(task)}><img src="src/img/edit.png" alt="Edit"  width={"20px"} />
+                </button>
+                <button className="btn  btn-sm" onClick={() => deleteTask(task.id)}><img src="src/img/delete.png" alt="Edit"  width={"20px"} /></button>
               </div>
             ))}
           </div>

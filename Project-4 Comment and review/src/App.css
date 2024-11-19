@@ -5,17 +5,12 @@ body {
   background: linear-gradient(111deg, rgba(2,0,36,0.9669117647058824) 0%, rgba(3,2,50,0.9108893557422969) 12%, rgba(4,3,64,0.9220938375350141) 24%, rgba(7,6,92,0.8100490196078431) 48%, rgba(9,9,121,0.7344187675070029) 73%, rgba(0,9,255,0.3842787114845938) 100%); */
   margin: 0;
   padding: 0;
- 
   background-image: url('../src/assets/img/1_XJpPGY70QpBeY-Qegl2EkA.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  background-blend-mode: darken !important;
-
-
-  
-  
+  background-blend-mode: darken !important; 
 }
 
 .container {
@@ -103,7 +98,6 @@ input[type="text"]:focus, input[type="email"]:focus {
 .add-btn:hover {
   background-color: #218838;
 }
-
 .delete-btn {
   padding: 10px 15px;
   color: #ffffff;
@@ -113,9 +107,7 @@ input[type="text"]:focus, input[type="email"]:focus {
   cursor: pointer;
   font-weight: 600;
   font-size: 20px;
- 
 }
-
 .delete-btn:hover {
   background-color: #c82333;
 }

@@ -99,7 +99,7 @@ const View = () => {
                                     <th scope="col" className='py-3 px-5'>Status</th>
                                     <th scope="col" className='py-3 px-5'>Action</th>
                                     <th scope="col" className='py-3 px-5'>
-                                        <button onClick={() => multiDeleteBtn()} className='btn btn-sm '><MdDelete   style={{fontSize:"25px" , color:"red" , backgroundColor:"white",marginLeft:"10px" }}/></button>
+                                        <button onClick={() => multiDeleteBtn()} className='btn btn-sm '><MdDelete   style={{fontSize:"25px" , color:"black" , backgroundColor:"white",marginLeft:"30px" }}/></button>
                                     </th>
                                 </tr>
                             </thead>
@@ -142,8 +142,8 @@ const View = () => {
                                                         <button onClick={handleSave} className='btn btn-sm btn-success'>Save</button>
                                                         :
                                                         <>
-                                                            <button onClick={() => handleDelete(val.id)} className='btn btn-sm'><MdDelete   style={{fontSize:"25px" , color:"red" , backgroundColor:"white",marginLeft:"10px" }}/></button>
-                                                            <button onClick={() => handleEdit(val.id)} className='btn btn-sm '><FiEdit  style={{fontSize:"23px" , color:"blue" , backgroundColor:"white", }} />
+                                                            <button onClick={() => handleDelete(val.id)} className='btn btn-sm'><MdDelete   style={{fontSize:"25px" , color:"black" , backgroundColor:"white",marginLeft:"10px" }}/></button>
+                                                            <button onClick={() => handleEdit(val.id)} className='btn btn-sm '><FiEdit  style={{fontSize:"23px" , color:"black" , backgroundColor:"white", }} />
                                                             </button>
                                                         </>
                                                     }

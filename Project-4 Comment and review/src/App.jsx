@@ -3,16 +3,13 @@ import './App.css';
 import TableRow from './TableRow';
 
 
-
 const App = () => {
   const [rows, setRows] = useState(() => {
-    // Load data from local storage if available
     const savedRows = localStorage.getItem('rows');
-    return savedRows ? JSON.parse(savedRows) : []; // Start with an empty array
+    return savedRows ? JSON.parse(savedRows) : []; 
   });
 
   useEffect(() => {
-    // Save rows to local storage whenever rows change
     localStorage.setItem('rows', JSON.stringify(rows));
   }, [rows]);
 

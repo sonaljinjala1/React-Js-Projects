@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../Header'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { MdDelete } from "react-icons/md";
+import { MdModeEdit } from "react-icons/md";
 
 const View = () => {
   const navigation = useNavigate()
@@ -54,16 +54,25 @@ const View = () => {
   }
 
   const filterData = (status) => {
-    const updatedRecords = record.filter((val) => val.status.toLowerCase() === status.toLowerCase())
-    setFilteredRecord(status === '' ? record : updatedRecords)
-  }
-
+    const filteredByStatus = record.filter((val) => 
+      status === '' || val.status.toLowerCase() === status.toLowerCase()
+    );
+    const finalFiltered = filteredByStatus.filter((val) =>
+      val.name.toLowerCase().includes(search)
+    );
+    setFilteredRecord(finalFiltered);
+  };
+  
   const handleSearch = (e) => {
-    const value = e.target.value.toLowerCase()
-    setSearch(value)
-    const filtered = record.filter((val) => val.name.toLowerCase().includes(value))
-    setFilteredRecord(filtered)
-  }
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
+    const filtered = record.filter((val) =>
+      (val.status.toLowerCase() === (filteredStatus || '').toLowerCase() || filteredStatus === '') &&
+      val.name.toLowerCase().includes(value)
+    );
+    setFilteredRecord(filtered);
+  };
+  
 
   const handleSort = (e) => {
     const value = e.target.value
@@ -124,7 +133,7 @@ const View = () => {
                   <th scope="col">Status</th>
                   <th scope="col">Action</th>
                   <th scope="col">
-                    <button className="btn btn-sm btn-danger" onClick={mulDelete}>Delete</button>
+                    <button className="btn btn-sm " onClick={mulDelete}><MdDelete style={{fontSize:"20px"}} /></button>
                   </th>
                 </tr>
               </thead>
@@ -147,8 +156,8 @@ const View = () => {
                         </button>
                       </td>
                       <td>
-                        <button className='btn btn-sm btn-danger mx-2' onClick={() => handleDelete(val.id)}>Delete</button>
-                        <button className='btn btn-sm btn-success mx-2' onClick={() => navigation('./edit', { state: val })}>Edit</button>
+                        <button className='btn btn-sm  mx-2' onClick={() => handleDelete(val.id)}><MdDelete style={{fontSize:"20px"}}></MdDelete></button>
+                        <button className='btn btn-sm  mx-2' onClick={() => navigation('./edit', { state: val })}><MdModeEdit   style={{fontSize:"20px"}}/></button>
                       </td>
                       <td>
                         <input type="checkbox" onChange={(e) => handlecheckDelete(val.id, e.target.checked)} />

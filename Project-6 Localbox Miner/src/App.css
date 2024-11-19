@@ -5,7 +5,7 @@ body {
 }
 
 .todo-card {
-  width: 350px;
+  width: 420px;
   border: 6px solid #b9d2b9 !important;
   border-radius: 10px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
@@ -22,6 +22,16 @@ input {
   border-radius: 5px;
   background-color: #e9f7e9 !important;
   margin-bottom: 10px !important;
+}
+input:focus{
+  outline: none !important;
+  border-color: #b9d2b9 !important;
+  box-shadow: 0 0 10px #b9d2b9 !important;
+}
+textarea:focus{
+  outline: none !important;
+  border-color: #b9d2b9 !important;
+  box-shadow: 0 0 10px #b9d2b9 !important;
 }
 textarea{
   border-radius: 5px;
@@ -46,6 +56,12 @@ button{
 
 .task-card h6 {
   font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
+}
+.task-card p{
+  margin: 0;
+  padding: 5px;
 }
 
 .task-card .btn {

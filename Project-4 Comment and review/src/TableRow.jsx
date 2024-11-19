@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const TableRow = ({ index, row, deleteRow, handleInputChange }) => {
@@ -31,7 +32,7 @@ const TableRow = ({ index, row, deleteRow, handleInputChange }) => {
         />
       </td>
       <td>
-        <img src="src/assets/img/delete.png"   width={"40px"}    style={{cursor: "pointer" , padding: "2px"}} onClick={() => deleteRow(index)} />
+        <img src="src/assets/img/delete.png"   width={"40px"}  style={{cursor: "pointer" , padding: "2px"}} onClick={() => deleteRow(index)} />
       </td>
     </tr>
   );

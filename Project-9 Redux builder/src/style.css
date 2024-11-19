@@ -1,0 +1,39 @@
+
+form{
+    position: relative;
+}
+input , textarea{
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.noteicon{
+    font-size: 40px;
+}
+.shadow{
+    box-shadow: 10px 10px  8px  1px rgba(0, 0, 0, 0.2)  !important;
+}
+.addbtn{
+    position: absolute;
+    right: 25px;
+    bottom: -0px;
+    color: orange;
+    font-size: 25px;
+    padding: 3px 8px;
+    outline: none;
+    border: none;
+    background-color:transparent;
+}
+.notes{
+    position: relative;
+}
+.deletebtn{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: orange;
+    background-color: red;
+}
