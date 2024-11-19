@@ -22,7 +22,7 @@ const View = () => {
 
     const multiDeleteBtn = () => {
         if (mDelete.length === 0) {
-            toast.error("At least one row select");
+            toast.error("At least one(1) row select");
             return false;
         }
 

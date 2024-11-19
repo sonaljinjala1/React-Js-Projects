@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className='container-fluid'>
       <div className="row ">
-      <nav className="navbar navbar-expand-lg bg-black   ">
+      <nav className="navbar navbar-expand-lg bg-black  ">
         <div className="container">
           <a className="navbar-brand   text-white" href="#"> React app</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

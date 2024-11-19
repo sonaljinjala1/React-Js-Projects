@@ -52,7 +52,6 @@ const View = () => {
     const updatedDeleteList = checked ? [...mdelete, id] : mdelete.filter(val => val !== id)
     setMdelete(updatedDeleteList)
   }
-
   const filterData = (status) => {
     const filteredByStatus = record.filter((val) => 
       status === '' || val.status.toLowerCase() === status.toLowerCase()

@@ -7,7 +7,7 @@ const TableRow = ({ index, row, deleteRow, handleInputChange }) => {
       <td>
         <input 
           type="text" 
-          name="fullName" 
+          name="full Name" 
           value={row.fullName} 
           onChange={(event) => handleInputChange(index, event)} 
           placeholder="Enter full name" 

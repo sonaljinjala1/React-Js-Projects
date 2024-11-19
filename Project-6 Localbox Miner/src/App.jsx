@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './App.css';
-
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [taskTitle, setTaskTitle] = useState('');
@@ -16,7 +15,7 @@ const App = () => {
     setTasks(storedTasks);
   }, []);
 
-  //Add Task 
+ 
   const addTask = () => {
     if (taskTitle && taskDate && taskDescription) {
       const newTask = {

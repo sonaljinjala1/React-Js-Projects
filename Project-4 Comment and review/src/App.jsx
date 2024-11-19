@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import TableRow from './TableRow';
-
-
 const App = () => {
   const [rows, setRows] = useState(() => {
     const savedRows = localStorage.getItem('rows');

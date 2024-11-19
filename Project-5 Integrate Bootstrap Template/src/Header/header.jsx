@@ -3,9 +3,6 @@ import './header.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { FaSearch } from "react-icons/fa";
-
-
-
 const Header = () => {
     return (
         <header>
