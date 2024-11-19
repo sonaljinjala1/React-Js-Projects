@@ -21,7 +21,7 @@ input , textarea{
     font-size: 25px;
     padding: 3px 8px;
     outline: none;
-    border: none;
+    border: none !important;
     background-color:transparent;
 }
 .notes{

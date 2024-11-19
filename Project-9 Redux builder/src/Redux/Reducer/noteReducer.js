@@ -2,7 +2,6 @@
 const initialState = {
     user : localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : []
 }
-
 const reducer = (state=initialState,action) => {
     switch(action.type){
         case 'add':
@@ -27,5 +26,4 @@ const reducer = (state=initialState,action) => {
             return state
     }
 }
-
 export default reducer
