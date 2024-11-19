@@ -1,10 +1,9 @@
 
-
 import { combineReducers } from "redux";
 import reducer from "./noteReducer";
 
-const rootreducer = combineReducers({
+const mainreducer = combineReducers({
     crud : reducer
 })
 
-export default rootreducer
+export default mainreducer
