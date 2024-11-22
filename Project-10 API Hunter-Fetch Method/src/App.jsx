@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 function App() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products')
+    fetch('https://dummyjson.com/products',
+       { method: 'GET' })
       .then(response => response.json())
       .then(data => {
         setProducts(data.products); 
-        setLoading(false); 
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setLoading(false);
       });
   }, []);
-
- 
-
+  
+  
   return (
     <div align="center">
       <h1>Product List-Fetch method</h1>

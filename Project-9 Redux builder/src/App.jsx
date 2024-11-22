@@ -51,6 +51,7 @@ function App() {
               </button>
             </form>
           </div>
+
           <div className='mt-5 d-flex flex-wrap justify-content-center'>
             {
               record.map((val) => {
@@ -66,6 +67,7 @@ function App() {
               })
             }
           </div>
+          
         </div>
       </div>
     </>

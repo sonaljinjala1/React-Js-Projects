@@ -1,80 +1,54 @@
-// src/App.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { IoMdStar } from "react-icons/io";
-
+import { FaStar } from "react-icons/fa";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchRecipes = async () => {
-      try {
-        const response = await axios.get('https://dummyjson.com/recipes');
-        setRecipes(response.data.recipes); // Assuming recipes are under "recipes" key
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
+    const Recipes = () => {
+      axios({
+        method: 'get',
+        url: 'https://dummyjson.com/recipes',
+      })
+        .then((response) => {
+          setRecipes(response.data.recipes);
+        })
+        .catch((error) => {
+          setError(error.message);
+        });
     };
+    
 
-    fetchRecipes();
+    Recipes();
   }, []);
-
-  // Function to render star images based on rating
-  const renderStars = (rating) => {
-    const fullStars = Math.floor(rating); // Number of full stars
-    const halfStar = rating % 1 !== 0; // Check if there's a half star
-
-    let stars = [];
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<IoMdStar   style={{ color: 'yellow', fontSize: '20px' }}/>);
-    }
-
-    if (halfStar) {
-      stars.push(<IoMdStar  style={{ color: 'yellow' , fontSize: '20px'}} />);
-    }
-
-    // If there are less than 5 stars, fill the remaining with empty stars
-    for (let i = stars.length; i < 5; i++) {
-      stars.push(<IoMdStar  style={{ color: 'gray' , fontSize: '20px' }} />);
-    }
-
-    return stars;
-  };
-
-  if (loading) return <p>Loading recipes...</p>;
-  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="container my-5">
       <h1 className="text-center mb-5">Recipe Collection</h1>
       <div className="row">
-        {recipes.map(recipe => (
-          <div className="col-md-4 mb-4" key={recipe.id}>
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src={recipe.image} 
-                className="card-img-top" 
-                alt={recipe.name} 
+        {recipes.map(val => (
+          <div className="col-md-4 mb-5" key={val.id}>
+            <div className="card h-100 shadow-lg border-0">
+              <img
+                src={val.image}
+                className="card-img-top"
+                alt={val.name}
                 style={{ height: '200px', objectFit: 'cover', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
               />
               <div className="card-body">
-                <h5 className="card-title">{recipe.name}</h5>
-                <p className="card-text"><strong>Description:</strong> {recipe.description}</p>
-                <p className="card-text"><strong>Cooking Time:</strong> {recipe.cookingTime} mins</p>
-                <p className="card-text"><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
-                <p className="card-text"><strong>Instructions:</strong> {recipe.instructions}</p>
-                
+                <h5 className="card-title">{val.name}</h5>
+                <p className="card-text"><strong>Description:</strong> {val.description}</p>
+                <p className="card-text"><strong>Cooking Time:</strong> {val.cookingTime} mins</p>
+                <p className="card-text"><strong>Ingredients:</strong> {val.ingredients.join(', ')}</p>
+                <p className="card-text"><strong>Instructions:</strong> {val.instructions}</p>
+
                 <div>
                   <strong>Rating: </strong>
-                  {renderStars(recipe.rating)} {/* Display stars */}
-                  <span className="ml-2">({recipe.totalReviews} reviews)</span> {/* Display total reviews */}
+                  {Math.round(val.rating)} {<FaStar  style={{ color: '#FFD700' }}/>}
+                  <span className="ml-2">({val.totalReviews} reviews)</span> 
                 </div>
               </div>
               <div className="card-footer bg-transparent border-0">
