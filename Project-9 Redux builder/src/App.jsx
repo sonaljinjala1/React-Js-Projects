@@ -7,16 +7,11 @@ import { PiNotePencilBold } from "react-icons/pi";
 import { FaPlus } from "react-icons/fa";
 import { useState } from 'react';
 
-
 function App() {
-
   const [title, setTitle] = useState("")
   const [note, setNote] = useState("")
-
   const record = useSelector(state => state.crud.user)
-
   const dispatch = useDispatch()
-  
   const handleSubmit = (e) => {
     e.preventDefault();
 
